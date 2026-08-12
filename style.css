@@ -131,3 +131,38 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
   .service,.step-grid div { border-right:0; border-bottom:1px solid var(--line); margin:0; padding-bottom:28px; }
   footer { display:block; line-height:2; }
 }
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.ticker span,
+.ticker b {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .ticker {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 12px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .ticker span {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+
+  .ticker b {
+    font-size: 10px;
+  }
+}
