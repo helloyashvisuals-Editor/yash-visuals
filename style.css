@@ -244,3 +244,16 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
     padding: 8px 0;
   }
   
+/* DESKTOP: HIDE MOBILE MENU */
+.mobile-menu {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .mobile-menu.open {
+    display: flex !important;
+  }
