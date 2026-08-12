@@ -131,6 +131,8 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
   .service,.step-grid div { border-right:0; border-bottom:1px solid var(--line); margin:0; padding-bottom:28px; }
   footer { display:block; line-height:2; }
 }
+/* TICKER */
+
 .ticker {
   width: 100%;
   overflow: hidden;
@@ -144,50 +146,7 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .ticker {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 12px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    text-align: center;
-  }
 
-  .ticker span {
-    font-size: 11px;
-    letter-spacing: 0.08em;
-  }
-
-  .ticker b {
-    font-size: 10px;
-  }
-
-@media screen and (max-width: 768px) {
-  .ticker {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 8px 12px !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 60px !important;
-    padding: 18px 10px !important;
-    box-sizing: border-box !important;
-    overflow: visible !important;
-    white-space: normal !important;
-  }
-
-  .ticker span,
-  .ticker b {
-    display: inline-block !important;
-    white-space: nowrap !important;
-    font-size: 10px !important;
-  }
 /* MOBILE MENU */
 
 .menu-toggle {
@@ -201,10 +160,34 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
 }
 
 .mobile-menu {
-  display: none;
+  display: none !important;
 }
 
+
+/* MOBILE */
+
 @media screen and (max-width: 768px) {
+
+  .ticker {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px 12px !important;
+    width: 100% !important;
+    min-height: 60px !important;
+    padding: 18px 10px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+  .ticker span,
+  .ticker b {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    font-size: 10px !important;
+  }
 
   .nav {
     display: flex;
@@ -225,8 +208,8 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
     display: block;
   }
 
-  .mobile-menu {
-    display: none;
+  .mobile-menu.open {
+    display: flex !important;
     flex-direction: column;
     gap: 20px;
     padding: 24px 20px 30px;
@@ -234,26 +217,10 @@ footer { display:flex; justify-content:space-between; padding:25px 6vw; border-t
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 
-  .mobile-menu.open {
-    display: flex;
-  }
-
   .mobile-menu a {
     font-size: 16px;
     font-weight: 600;
     padding: 8px 0;
   }
-  
-/* DESKTOP: HIDE MOBILE MENU */
-.mobile-menu {
-  display: none !important;
+
 }
-
-@media screen and (max-width: 768px) {
-  .mobile-menu {
-    display: none !important;
-  }
-
-  .mobile-menu.open {
-    display: flex !important;
-  }
